@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "description": "Base externa de conhecimento para recomendação de carreiras em TI",
+    "escala": {
+      "min": 1,
+      "max": 5,
+      "labels": {
+        "1": "Muito baixa",
+        "2": "Baixa",
+        "3": "Moderada",
+        "4": "Alta",
+        "5": "Muito alta"
+      }
+    },
+    "normalizacao": "A pontuação positiva é normalizada pela soma dos pesos aplicáveis. Penalidades reduzem a pontuação antes da conversão para percentual."
+  },
+  "questions": [
+    {
+      "id": "logica",
+      "label": "Quanto você gosta de resolver problemas usando lógica e raciocínio?",
+      "category": "raciocinio",
+      "weight": 1.2
+    },
+    {
+      "id": "matematica",
+      "label": "Qual sua afinidade com matemática, estatística e análise quantitativa?",
+      "category": "dados",
+      "weight": 1.0
+    },
+    {
+      "id": "visual",
+      "label": "Quanto você gosta de design visual, interfaces e experiência do usuário?",
+      "category": "criatividade",
+      "weight": 1.1
+    },
+    {
+      "id": "infra",
+      "label": "Quanto você se interessa por servidores, redes, sistemas e infraestrutura?",
+      "category": "infraestrutura",
+      "weight": 1.2
+    },
+    {
+      "id": "seguranca",
+      "label": "Quanto você gosta de investigar vulnerabilidades e pensar em segurança?",
+      "category": "seguranca",
+      "weight": 1.2
+    },
+    {
+      "id": "dados",
+      "label": "Quanto você gosta de organizar, consultar e interpretar grandes volumes de dados?",
+      "category": "dados",
+      "weight": 1.1
+    },
+    {
+      "id": "automacao",
+      "label": "Quanto você gosta de automatizar tarefas e criar processos repetíveis?",
+      "category": "automacao",
+      "weight": 1.0
+    },
+    {
+      "id": "comunicacao",
+      "label": "Quanto você gosta de conversar com pessoas, entender necessidades e explicar soluções?",
+      "category": "comunicacao",
+      "weight": 1.0
+    },
+    {
+      "id": "organizacao",
+      "label": "Quanto você gosta de planejar, priorizar tarefas e acompanhar entregas?",
+      "category": "gestao",
+      "weight": 1.0
+    },
+    {
+      "id": "qualidade",
+      "label": "Quanto você é atento a detalhes e gosta de encontrar erros?",
+      "category": "qualidade",
+      "weight": 1.0
+    },
+    {
+      "id": "programacao",
+      "label": "Quanto você gosta de programar e construir soluções com código?",
+      "category": "desenvolvimento",
+      "weight": 1.2
+    },
+    {
+      "id": "colaboracao",
+      "label": "Quanto você gosta de trabalhar em equipe e integrar diferentes áreas?",
+      "category": "colaboracao",
+      "weight": 0.8
+    }
+  ],
+  "tracks": {
+    "Backend": {
+      "description": "Construção de APIs, regras de negócio, serviços e integrações.",
+      "weights": {
+        "logica": 1.0,
+        "matematica": 0.35,
+        "visual": -0.25,
+        "infra": 0.35,
+        "seguranca": 0.25,
+        "dados": 0.35,
+        "automacao": 0.45,
+        "comunicacao": 0.15,
+        "organizacao": 0.2,
+        "qualidade": 0.45,
+        "programacao": 1.0,
+        "colaboracao": 0.2
+      },
+      "skills": {
+        "Python ou Java": 3,
+        "Lógica de programação": 3,
+        "Git e GitHub": 2,
+        "SQL e modelagem relacional": 2,
+        "HTTP e APIs REST": 2,
+        "Testes automatizados": 1,
+        "Docker básico": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Lógica e estruturas de dados",
+            "Python ou Java",
+            "Git e GitHub"
+          ],
+          "certifications": [
+            "Certificação introdutória de Python (opcional)"
+          ],
+          "project": "API de tarefas com CRUD, validação e documentação."
+        },
+        {
+          "phase": "Desenvolvimento de APIs",
+          "topics": [
+            "HTTP, JSON e REST",
+            "SQL e modelagem de banco",
+            "Autenticação e autorização"
+          ],
+          "certifications": [
+            " cursos introdutórios de APIs e bancos relacionais"
+          ],
+          "project": "API de controle financeiro com autenticação e banco relacional."
+        },
+        {
+          "phase": "Prática profissional",
+          "topics": [
+            "Testes unitários e integração",
+            "Docker básico",
+            "Deploy e observabilidade"
+          ],
+          "certifications": [
+            "AWS Cloud Practitioner ou equivalente (opcional)"
+          ],
+          "project": "API containerizada, testada, documentada e publicada."
+        }
+      ]
+    },
+    "Frontend / UX": {
+      "description": "Criação de interfaces, acessibilidade e experiência de uso.",
+      "weights": {
+        "logica": 0.65,
+        "matematica": -0.2,
+        "visual": 1.0,
+        "infra": -0.25,
+        "seguranca": -0.1,
+        "dados": 0.1,
+        "automacao": 0.2,
+        "comunicacao": 0.55,
+        "organizacao": 0.25,
+        "qualidade": 0.45,
+        "programacao": 0.8,
+        "colaboracao": 0.35
+      },
+      "skills": {
+        "HTML semântico": 3,
+        "CSS responsivo": 3,
+        "JavaScript": 3,
+        "Git e GitHub": 2,
+        "React ou Vue": 2,
+        "Acessibilidade": 1,
+        "Testes de interface": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos web",
+          "topics": [
+            "HTML semântico",
+            "CSS e responsividade",
+            "JavaScript"
+          ],
+          "certifications": [
+            "Certificações introdutórias web (opcionais)"
+          ],
+          "project": "Portfólio responsivo com três páginas e acessibilidade básica."
+        },
+        {
+          "phase": "Interfaces modernas",
+          "topics": [
+            "React ou Vue",
+            "Consumo de APIs",
+            "Gerenciamento de estado"
+          ],
+          "certifications": [
+            "Cursos de React/Vue com projeto prático"
+          ],
+          "project": "Dashboard que consome uma API pública e possui filtros."
+        },
+        {
+          "phase": "Qualidade de UX",
+          "topics": [
+            "Acessibilidade WCAG",
+            "Testes de interface",
+            "Performance web"
+          ],
+          "certifications": [
+            "Certificação de UX ou acessibilidade (opcional)"
+          ],
+          "project": "Redesign documentado de uma interface com testes de usabilidade."
+        }
+      ]
+    },
+    "Cientista de Dados": {
+      "description": "Análise exploratória, estatística, experimentação e modelos preditivos.",
+      "weights": {
+        "logica": 0.7,
+        "matematica": 1.0,
+        "visual": 0.15,
+        "infra": -0.15,
+        "seguranca": 0.0,
+        "dados": 1.0,
+        "automacao": 0.35,
+        "comunicacao": 0.35,
+        "organizacao": 0.2,
+        "qualidade": 0.5,
+        "programacao": 0.7,
+        "colaboracao": 0.2
+      },
+      "skills": {
+        "Python": 3,
+        "Estatística descritiva": 3,
+        "Pandas e NumPy": 2,
+        "SQL": 2,
+        "Visualização de dados": 2,
+        "Machine Learning básico": 1,
+        "Validação de modelos": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Base analítica",
+          "topics": [
+            "Python",
+            "Estatística descritiva e probabilidade",
+            "Pandas e NumPy"
+          ],
+          "certifications": [
+            "IBM Data Science ou equivalente (opcional)"
+          ],
+          "project": "Análise exploratória de um conjunto de dados público."
+        },
+        {
+          "phase": "Modelagem",
+          "topics": [
+            "SQL",
+            "Visualização de dados",
+            "Machine Learning supervisionado"
+          ],
+          "certifications": [
+            "Certificação introdutória de análise de dados (opcional)"
+          ],
+          "project": "Modelo preditivo com comparação de métricas e explicação dos resultados."
+        },
+        {
+          "phase": "Portfólio",
+          "topics": [
+            "Validação cruzada",
+            "Feature engineering",
+            "Comunicação de resultados"
+          ],
+          "certifications": [
+            "Google Advanced Data Analytics (opcional)"
+          ],
+          "project": "Estudo completo: pergunta, dados, modelo, métricas e apresentação executiva."
+        }
+      ]
+    },
+    "Engenharia de Dados": {
+      "description": "Construção de pipelines, integração, armazenamento e qualidade de dados.",
+      "weights": {
+        "logica": 0.8,
+        "matematica": 0.35,
+        "visual": -0.2,
+        "infra": 0.7,
+        "seguranca": 0.2,
+        "dados": 1.0,
+        "automacao": 0.9,
+        "comunicacao": 0.1,
+        "organizacao": 0.35,
+        "qualidade": 0.55,
+        "programacao": 0.8,
+        "colaboracao": 0.15
+      },
+      "skills": {
+        "Python": 3,
+        "SQL avançado": 3,
+        "Modelagem de dados": 2,
+        "ETL/ELT": 2,
+        "Git": 2,
+        "Orquestração de pipelines": 1,
+        "Docker e cloud básico": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Python",
+            "SQL",
+            "Modelagem relacional e dimensional"
+          ],
+          "certifications": [
+            "Cursos de SQL e fundamentos de dados"
+          ],
+          "project": "Pipeline simples que extrai dados de API e grava em banco."
+        },
+        {
+          "phase": "Pipelines",
+          "topics": [
+            "ETL/ELT",
+            "Qualidade e testes de dados",
+            "Airflow ou ferramenta equivalente"
+          ],
+          "certifications": [
+            "Certificação introdutória de engenharia de dados (opcional)"
+          ],
+          "project": "Pipeline agendado com logs, validação e documentação."
+        },
+        {
+          "phase": "Plataforma",
+          "topics": [
+            "Data warehouse",
+            "Spark básico",
+            "Cloud e Docker"
+          ],
+          "certifications": [
+            "AWS Data Engineer Associate ou equivalente (após prática)"
+          ],
+          "project": "Mini plataforma analítica com ingestão, transformação e dashboard."
+        }
+      ]
+    },
+    "Cibersegurança": {
+      "description": "Proteção de sistemas, análise de riscos, vulnerabilidades e resposta a incidentes.",
+      "weights": {
+        "logica": 0.7,
+        "matematica": 0.1,
+        "visual": -0.25,
+        "infra": 0.75,
+        "seguranca": 1.0,
+        "dados": 0.15,
+        "automacao": 0.45,
+        "comunicacao": 0.2,
+        "organizacao": 0.25,
+        "qualidade": 0.7,
+        "programacao": 0.45,
+        "colaboracao": 0.15
+      },
+      "skills": {
+        "Redes TCP/IP": 3,
+        "Linux": 3,
+        "Fundamentos de segurança": 3,
+        "Python ou Bash": 1,
+        "OWASP Top 10": 2,
+        "Análise de logs": 1,
+        "Laboratórios controlados": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Redes TCP/IP",
+            "Linux e linha de comando",
+            "Princípios de segurança"
+          ],
+          "certifications": [
+            "CompTIA Security+ (quando tiver base)"
+          ],
+          "project": "Laboratório documentado de hardening em máquina virtual própria."
+        },
+        {
+          "phase": "Segurança aplicada",
+          "topics": [
+            "OWASP Top 10",
+            "Análise de logs",
+            "Python/Bash para automação"
+          ],
+          "certifications": [
+            "ISC2 Certified in Cybersecurity (se disponível)"
+          ],
+          "project": "Relatório de avaliação de segurança em aplicação de laboratório autorizada."
+        },
+        {
+          "phase": "Especialização inicial",
+          "topics": [
+            "Gestão de vulnerabilidades",
+            "Resposta a incidentes",
+            "SIEM básico"
+          ],
+          "certifications": [
+            "Security+ ou certificação equivalente"
+          ],
+          "project": "Laboratório de monitoramento com alertas e plano de resposta."
+        }
+      ]
+    },
+    "DevOps / SRE": {
+      "description": "Automação de entrega, infraestrutura como código, confiabilidade e observabilidade.",
+      "weights": {
+        "logica": 0.75,
+        "matematica": 0.1,
+        "visual": -0.3,
+        "infra": 1.0,
+        "seguranca": 0.35,
+        "dados": 0.15,
+        "automacao": 1.0,
+        "comunicacao": 0.2,
+        "organizacao": 0.5,
+        "qualidade": 0.5,
+        "programacao": 0.55,
+        "colaboracao": 0.25
+      },
+      "skills": {
+        "Linux": 3,
+        "Redes básicas": 2,
+        "Git": 2,
+        "Docker": 3,
+        "CI/CD": 2,
+        "Cloud básica": 2,
+        "Monitoramento e logs": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Base de infraestrutura",
+          "topics": [
+            "Linux",
+            "Redes e DNS",
+            "Git e shell scripting"
+          ],
+          "certifications": [
+            "Linux Essentials (opcional)"
+          ],
+          "project": "Scripts para automatizar tarefas administrativas em ambiente local."
+        },
+        {
+          "phase": "Containers e entrega",
+          "topics": [
+            "Docker",
+            "CI/CD com GitHub Actions",
+            "Infraestrutura como código"
+          ],
+          "certifications": [
+            "Docker ou fundamentos de cloud (opcional)"
+          ],
+          "project": "Aplicação com pipeline de testes e deploy automatizado."
+        },
+        {
+          "phase": "Confiabilidade",
+          "topics": [
+            "Cloud",
+            "Monitoramento e logs",
+            "Conceitos SLI/SLO"
+          ],
+          "certifications": [
+            "AWS Cloud Practitioner ou Azure Fundamentals"
+          ],
+          "project": "Serviço implantado com métricas, alertas e documentação de recuperação."
+        }
+      ]
+    },
+    "Cloud Architecture": {
+      "description": "Desenho e operação de soluções escaláveis em plataformas de nuvem.",
+      "weights": {
+        "logica": 0.65,
+        "matematica": 0.15,
+        "visual": -0.15,
+        "infra": 1.0,
+        "seguranca": 0.5,
+        "dados": 0.2,
+        "automacao": 0.7,
+        "comunicacao": 0.35,
+        "organizacao": 0.45,
+        "qualidade": 0.3,
+        "programacao": 0.35,
+        "colaboracao": 0.25
+      },
+      "skills": {
+        "Redes": 2,
+        "Linux": 2,
+        "Conceitos de cloud": 3,
+        "IAM e segurança": 2,
+        "Armazenamento e bancos": 1,
+        "Alta disponibilidade": 1,
+        "Infraestrutura como código": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Redes e DNS",
+            "Linux",
+            "Conceitos IaaS, PaaS e SaaS"
+          ],
+          "certifications": [
+            "AWS Cloud Practitioner ou Azure Fundamentals"
+          ],
+          "project": "Arquitetura documentada de site estático em nuvem."
+        },
+        {
+          "phase": "Serviços e segurança",
+          "topics": [
+            "Computação, storage e bancos gerenciados",
+            "IAM",
+            "Redes virtuais"
+          ],
+          "certifications": [
+            "Certificação associate da nuvem escolhida (após prática)"
+          ],
+          "project": "Aplicação simples com rede, banco, permissões e monitoramento."
+        },
+        {
+          "phase": "Arquitetura",
+          "topics": [
+            "Alta disponibilidade",
+            "Escalabilidade e custos",
+            "Terraform ou equivalente"
+          ],
+          "certifications": [
+            "AWS Solutions Architect Associate ou Azure Administrator"
+          ],
+          "project": "Desenho de arquitetura resiliente com estimativa de custos e diagrama."
+        }
+      ]
+    },
+    "Mobile": {
+      "description": "Desenvolvimento de aplicativos para dispositivos móveis.",
+      "weights": {
+        "logica": 0.75,
+        "matematica": 0.1,
+        "visual": 0.65,
+        "infra": -0.15,
+        "seguranca": 0.1,
+        "dados": 0.1,
+        "automacao": 0.2,
+        "comunicacao": 0.25,
+        "organizacao": 0.2,
+        "qualidade": 0.4,
+        "programacao": 0.9,
+        "colaboracao": 0.2
+      },
+      "skills": {
+        "Kotlin ou Dart": 3,
+        "Fundamentos de programação": 3,
+        "UI mobile": 2,
+        "Consumo de APIs": 2,
+        "Persistência local": 1,
+        "Git": 2,
+        "Testes mobile": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Kotlin/Android ou Dart/Flutter",
+            "Layouts e navegação",
+            "Git"
+          ],
+          "certifications": [
+            "Cursos oficiais introdutórios Android/Flutter"
+          ],
+          "project": "Aplicativo de lista de tarefas com navegação."
+        },
+        {
+          "phase": "Aplicações conectadas",
+          "topics": [
+            "Consumo de APIs",
+            "Persistência local",
+            "Gerenciamento de estado"
+          ],
+          "certifications": [
+            "Certificação não é prioritária nesta fase"
+          ],
+          "project": "Aplicativo de catálogo com API e favoritos offline."
+        },
+        {
+          "phase": "Qualidade e publicação",
+          "topics": [
+            "Testes",
+            "Acessibilidade mobile",
+            "Build e publicação"
+          ],
+          "certifications": [
+            "Certificações de plataforma, se relevantes"
+          ],
+          "project": "Aplicativo completo com testes, documentação e vídeo demonstrativo."
+        }
+      ]
+    },
+    "QA": {
+      "description": "Garantia da qualidade, testes manuais e automatizados e prevenção de defeitos.",
+      "weights": {
+        "logica": 0.75,
+        "matematica": 0.1,
+        "visual": 0.1,
+        "infra": 0.1,
+        "seguranca": 0.15,
+        "dados": 0.1,
+        "automacao": 0.65,
+        "comunicacao": 0.4,
+        "organizacao": 0.55,
+        "qualidade": 1.0,
+        "programacao": 0.45,
+        "colaboracao": 0.35
+      },
+      "skills": {
+        "Fundamentos de testes": 3,
+        "Casos e cenários de teste": 3,
+        "Relato de bugs": 2,
+        "SQL básico": 1,
+        "API testing": 2,
+        "Automação básica": 1,
+        "Git": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos",
+          "topics": [
+            "Ciclo de desenvolvimento",
+            "Tipos e níveis de teste",
+            "Casos de teste e bug reports"
+          ],
+          "certifications": [
+            "ISTQB Foundation (opcional, reconhecida no mercado)"
+          ],
+          "project": "Plano de testes e relatório de defeitos de uma aplicação pública de demonstração."
+        },
+        {
+          "phase": "Testes de API e dados",
+          "topics": [
+            "HTTP e Postman",
+            "SQL básico",
+            "Testes de API"
+          ],
+          "certifications": [
+            "ISTQB Foundation (se fizer sentido)"
+          ],
+          "project": "Coleção automatizada de testes de API com evidências."
+        },
+        {
+          "phase": "Automação",
+          "topics": [
+            "Python ou JavaScript",
+            "Playwright ou Selenium",
+            "CI com GitHub Actions"
+          ],
+          "certifications": [
+            "Certificações de ferramentas são opcionais"
+          ],
+          "project": "Suíte de testes automatizados integrada a pipeline."
+        }
+      ]
+    },
+    "Product Management": {
+      "description": "Definição de problemas, estratégia, priorização e alinhamento entre negócio e tecnologia.",
+      "weights": {
+        "logica": 0.25,
+        "matematica": 0.2,
+        "visual": 0.25,
+        "infra": -0.25,
+        "seguranca": -0.1,
+        "dados": 0.45,
+        "automacao": 0.0,
+        "comunicacao": 1.0,
+        "organizacao": 1.0,
+        "qualidade": 0.35,
+        "programacao": -0.2,
+        "colaboracao": 0.9
+      },
+      "skills": {
+        "Descoberta de produto": 3,
+        "Comunicação e facilitação": 3,
+        "Métricas e indicadores": 2,
+        "Mapeamento de jornadas": 2,
+        "Priorização": 2,
+        "Scrum/Kanban": 1,
+        "Noções de tecnologia": 1
+      },
+      "roadmap": [
+        {
+          "phase": "Fundamentos de produto",
+          "topics": [
+            "Discovery e entrevistas",
+            "Personas e jornadas",
+            "Problema versus solução"
+          ],
+          "certifications": [
+            "Cursos introdutórios de Product Management"
+          ],
+          "project": "Estudo de caso de descoberta de problema com entrevistas simuladas claramente identificadas."
+        },
+        {
+          "phase": "Gestão e métricas",
+          "topics": [
+            "Métricas de produto",
+            "Priorização",
+            "Roadmap e backlog"
+          ],
+          "certifications": [
+            "PSPO I ou certificação equivalente (opcional)"
+          ],
+          "project": "Case de produto com hipótese, métricas, priorização e roadmap."
+        },
+        {
+          "phase": "Execução",
+          "topics": [
+            "Scrum/Kanban",
+            "Experimentação",
+            "Alinhamento com engenharia e design"
+          ],
+          "certifications": [
+            "PSPO I (se alinhada ao objetivo)"
+          ],
+          "project": "Protótipo navegável e apresentação de decisão baseada em dados."
+        }
+      ]
+    }
+  },
+  "penalties": [
+    {
+      "id": "sem_programacao_dev",
+      "when": {
+        "programacao_max": 2
+      },
+      "tracks": [
+        "Backend",
+        "Frontend / UX",
+        "Cientista de Dados",
+        "Engenharia de Dados",
+        "Mobile"
+      ],
+      "penalty": 5,
+      "reason": "Baixa afinidade declarada com programação reduz a aderência inicial a trilhas fortemente baseadas em código."
+    },
+    {
+      "id": "sem_infra",
+      "when": {
+        "infra_max": 2,
+        "seguranca_max": 2
+      },
+      "tracks": [
+        "DevOps / SRE",
+        "Cloud Architecture",
+        "Cibersegurança"
+      ],
+      "penalty": 5,
+      "reason": "Pouco interesse simultâneo em infraestrutura e segurança reduz a aderência a trilhas de infraestrutura."
+    },
+    {
+      "id": "sem_comunicacao_produto",
+      "when": {
+        "comunicacao_max": 2,
+        "organizacao_max": 2
+      },
+      "tracks": [
+        "Product Management"
+      ],
+      "penalty": 7,
+      "reason": "Baixa afinidade com comunicação e organização é conflitante com atividades centrais de gestão de produto."
+    }
+  ],
+  "seniority": {
+    "levels": [
+      "Iniciante",
+      "Básico",
+      "Intermediário",
+      "Avançado"
+    ],
+    "description": "O nível informado pelo usuário é comparado com os requisitos mínimos de cada competência para estimar lacunas rumo ao nível Júnior."
+  }
+}
