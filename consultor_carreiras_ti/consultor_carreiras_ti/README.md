@@ -82,21 +82,3 @@ consultor_carreiras_ti/
 3. Informa o nível atual nas competências cadastradas.
 4. O motor calcula a pontuação de cada trilha, aplica penalidades e ordena o ranking.
 5. O sistema identifica gaps para nível Júnior e apresenta roadmap e projetos.
-
-## Publicar no GitHub
-
-Crie um repositório vazio e execute na pasta do projeto:
-
-```bash
-git init
-git add .
-git commit -m "Sistema especialista de recomendação de carreiras em TI"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-git push -u origin main
-```
-
-Substitua a URL de exemplo pela URL do seu repositório.
-
-## Observação acadêmica
-Os pesos, limiares e competências constituem uma base de conhecimento inicial criada para o projeto. O sistema é explicável, mas não deve ser apresentado como instrumento validado cientificamente. O resultado é uma recomendação orientativa.
